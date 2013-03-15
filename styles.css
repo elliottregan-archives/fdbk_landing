@@ -19,19 +19,31 @@ section {
   margin: auto;
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 320px) {
 
   html, .wrapper {
-    min-width: 320px;
-    max-width: 480px;
+    min-width: 0;
+    max-width: 320px;
   }
   
   body {
-    padding-top: 100px;
+    padding-top: 90px;
+  }
+  
+  header {
+    min-width: 0 !important;
+  }
+  
+  h1 {
+    margin: 10px 0;
   }
   
   section {
     padding: 20px 10px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
   
   .photo_bg {
@@ -39,7 +51,7 @@ section {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-position: center center;
+    background: no-repeat fixed center center;
   }
   
   input, button {
@@ -63,6 +75,9 @@ section {
     width: 100% !important;
     height: auto !important;
     text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
   
   .valueprop_img {
@@ -72,9 +87,6 @@ section {
   .valueprop_txt {
     margin: 0;
     padding: 20px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
   }
   
   .value_prop {
@@ -89,7 +101,7 @@ section {
   }
   
   .green_ptn {
-    background: whitesmoke !important;
+    background: white !important;
   }
 
 }
@@ -98,6 +110,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  min-width: 720px;
   background-color: #ffffff;
   border-top: 3px solid #5a751e;
   font-size: .8em;
@@ -246,7 +259,7 @@ p.highlighted {
 }
 
 .photo_bg {
-  background: url('images/photo_bg.jpg') no-repeat left top #7d7e86;
+  background: url('images/photo_bg.jpg') no-repeat left top #a8aab1;
   background-size: 100%;
   color: #ffffff;
   text-shadow: 0 2px 4px rgb(0, 0, 0);
